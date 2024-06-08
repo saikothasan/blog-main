@@ -36,9 +36,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: ${{ inputs.name }}
-        path: ${{ runner.temp }}/artifact.tar
-        retention-days: ${{ inputs.retention-days }}
-        if-no-files-found: error
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: ${{ inputs.retention-days }}
+          if-no-files-found: error
 
   deploy:
     environment:
